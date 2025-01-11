@@ -21,6 +21,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import online.held_der_zeit.finalmix.KingdomKeysFinalMix;
+import online.held_der_zeit.finalmix.entity.mob.FMStealthSoldierEntity;
 import online.kingdomkeys.kingdomkeys.KingdomKeys;
 import online.kingdomkeys.kingdomkeys.block.ModBlocks;
 import online.kingdomkeys.kingdomkeys.client.ClientSetup;
@@ -70,32 +71,33 @@ public class ModEntities {
     //Mobs
     public static final Item.Properties PROPERTIES = new Item.Properties();
 
-    public static final RegistryObject<EntityType<ShadowEntity>> TYPE_SHADOW = createEntityType(ShadowEntity::new, ShadowEntity::new, MobCategory.MONSTER, "shadow", 0.5F, 0.7F);
-    public static final RegistryObject<EntityType<MegaShadowEntity>> TYPE_MEGA_SHADOW = createEntityType(MegaShadowEntity::new, MegaShadowEntity::new, MobCategory.MONSTER, "mega_shadow", 1.5F, 1.7F);
-    public static final RegistryObject<EntityType<GigaShadowEntity>> TYPE_GIGA_SHADOW = createEntityType(GigaShadowEntity::new, GigaShadowEntity::new, MobCategory.MONSTER, "giga_shadow", 2.5F, 2.7F);
-    public static final RegistryObject<EntityType<DarkballEntity>> TYPE_DARKBALL = createEntityType(DarkballEntity::new, DarkballEntity::new, MobCategory.MONSTER, "darkball", 1.5F, 2F);
-    public static final RegistryObject<EntityType<ShadowGlobEntity>> TYPE_SHADOW_GLOB = createEntityType(ShadowGlobEntity::new, ShadowGlobEntity::new, MobCategory.MONSTER, "shadow_glob", 1F, 1F);
+//    public static final RegistryObject<EntityType<ShadowEntity>> TYPE_SHADOW = createEntityType(ShadowEntity::new, ShadowEntity::new, MobCategory.MONSTER, "shadow", 0.5F, 0.7F);
+//    public static final RegistryObject<EntityType<MegaShadowEntity>> TYPE_MEGA_SHADOW = createEntityType(MegaShadowEntity::new, MegaShadowEntity::new, MobCategory.MONSTER, "mega_shadow", 1.5F, 1.7F);
+//    public static final RegistryObject<EntityType<GigaShadowEntity>> TYPE_GIGA_SHADOW = createEntityType(GigaShadowEntity::new, GigaShadowEntity::new, MobCategory.MONSTER, "giga_shadow", 2.5F, 2.7F);
+//    public static final RegistryObject<EntityType<DarkballEntity>> TYPE_DARKBALL = createEntityType(DarkballEntity::new, DarkballEntity::new, MobCategory.MONSTER, "darkball", 1.5F, 2F);
+//    public static final RegistryObject<EntityType<ShadowGlobEntity>> TYPE_SHADOW_GLOB = createEntityType(ShadowGlobEntity::new, ShadowGlobEntity::new, MobCategory.MONSTER, "shadow_glob", 1F, 1F);
 
     //Emblems
-    public static final RegistryObject<EntityType<MinuteBombEntity>> TYPE_MINUTE_BOMB = createEntityType(MinuteBombEntity::new, MinuteBombEntity::new, MobCategory.MONSTER, "minute_bomb", 0.6F, 1.3F);
-    public static final RegistryObject<EntityType<SkaterBombEntity>> TYPE_SKATER_BOMB = createEntityType(SkaterBombEntity::new, SkaterBombEntity::new, MobCategory.MONSTER, "skater_bomb", 0.6F, 1.3F);
-    public static final RegistryObject<EntityType<StormBombEntity>> TYPE_STORM_BOMB = createEntityType(StormBombEntity::new, StormBombEntity::new, MobCategory.MONSTER, "storm_bomb", 0.6F, 1.3F);
-    public static final RegistryObject<EntityType<DetonatorEntity>> TYPE_DETONATOR = createEntityType(DetonatorEntity::new, DetonatorEntity::new, MobCategory.MONSTER, "detonator", 0.6F, 1.3F);
-    public static final RegistryObject<EntityType<RedNocturneEntity>> TYPE_RED_NOCTURNE = createEntityTypeImmuneToFire(RedNocturneEntity::new, RedNocturneEntity::new, MobCategory.MONSTER, "red_nocturne", 1.0F,  2.0F);
-    public static final RegistryObject<EntityType<BlueRhapsodyEntity>> TYPE_BLUE_RHAPSODY = createEntityType(BlueRhapsodyEntity::new, BlueRhapsodyEntity::new, MobCategory.MONSTER, "blue_rhapsody", 1.0F, 2.0F);
-    public static final RegistryObject<EntityType<YellowOperaEntity>> TYPE_YELLOW_OPERA = createEntityType(YellowOperaEntity::new, YellowOperaEntity::new, MobCategory.MONSTER, "yellow_opera", 1.0F, 2.0F);
-    public static final RegistryObject<EntityType<GreenRequiemEntity>> TYPE_GREEN_REQUIEM = createEntityType(GreenRequiemEntity::new, GreenRequiemEntity::new, MobCategory.MONSTER, "green_requiem", 1.0F, 2.0F);
-    public static final RegistryObject<EntityType<SpawningOrbEntity>> TYPE_SPAWNING_ORB = createEntityType(SpawningOrbEntity::new, SpawningOrbEntity::new, MobCategory.MONSTER, "spawning_orb", 1.5F,  1.5F);
+//    public static final RegistryObject<EntityType<MinuteBombEntity>> TYPE_MINUTE_BOMB = createEntityType(MinuteBombEntity::new, MinuteBombEntity::new, MobCategory.MONSTER, "minute_bomb", 0.6F, 1.3F);
+//    public static final RegistryObject<EntityType<SkaterBombEntity>> TYPE_SKATER_BOMB = createEntityType(SkaterBombEntity::new, SkaterBombEntity::new, MobCategory.MONSTER, "skater_bomb", 0.6F, 1.3F);
+//    public static final RegistryObject<EntityType<StormBombEntity>> TYPE_STORM_BOMB = createEntityType(StormBombEntity::new, StormBombEntity::new, MobCategory.MONSTER, "storm_bomb", 0.6F, 1.3F);
+//    public static final RegistryObject<EntityType<DetonatorEntity>> TYPE_DETONATOR = createEntityType(DetonatorEntity::new, DetonatorEntity::new, MobCategory.MONSTER, "detonator", 0.6F, 1.3F);
+//    public static final RegistryObject<EntityType<RedNocturneEntity>> TYPE_RED_NOCTURNE = createEntityTypeImmuneToFire(RedNocturneEntity::new, RedNocturneEntity::new, MobCategory.MONSTER, "red_nocturne", 1.0F,  2.0F);
+//    public static final RegistryObject<EntityType<BlueRhapsodyEntity>> TYPE_BLUE_RHAPSODY = createEntityType(BlueRhapsodyEntity::new, BlueRhapsodyEntity::new, MobCategory.MONSTER, "blue_rhapsody", 1.0F, 2.0F);
+//    public static final RegistryObject<EntityType<YellowOperaEntity>> TYPE_YELLOW_OPERA = createEntityType(YellowOperaEntity::new, YellowOperaEntity::new, MobCategory.MONSTER, "yellow_opera", 1.0F, 2.0F);
+//    public static final RegistryObject<EntityType<GreenRequiemEntity>> TYPE_GREEN_REQUIEM = createEntityType(GreenRequiemEntity::new, GreenRequiemEntity::new, MobCategory.MONSTER, "green_requiem", 1.0F, 2.0F);
+//    public static final RegistryObject<EntityType<SpawningOrbEntity>> TYPE_SPAWNING_ORB = createEntityType(SpawningOrbEntity::new, SpawningOrbEntity::new, MobCategory.MONSTER, "spawning_orb", 1.5F,  1.5F);
 
-    public static final RegistryObject<EntityType<SoldierEntity>> TYPE_SOLDIER = createEntityType(SoldierEntity::new, SoldierEntity::new, MobCategory.MONSTER, "soldier", 0.8F, 1.6F);
-    public static final RegistryObject<EntityType<WhiteMushroomEntity>> TYPE_WHITE_MUSHROOM = createEntityType(WhiteMushroomEntity::new, WhiteMushroomEntity::new, MobCategory.MONSTER, "white_mushroom", 0.6F, 1.1F);
-    public static final RegistryObject<EntityType<BlackFungusEntity>> TYPE_BLACK_FUNGUS = createEntityType(BlackFungusEntity::new, BlackFungusEntity::new, MobCategory.MONSTER, "black_fungus", 0.6F, 1.1F);
+//    public static final RegistryObject<EntityType<SoldierEntity>> TYPE_SOLDIER = createEntityType(SoldierEntity::new, SoldierEntity::new, MobCategory.MONSTER, "soldier", 0.8F, 1.6F);
+    public static final RegistryObject<EntityType<SoldierEntity>> TYPE_STEALTH_SOLDIER = createEntityType(FMStealthSoldierEntity::new, FMStealthSoldierEntity::new, MobCategory.MONSTER, "stealth_soldier", 0.8F, 1.6F);
+//    public static final RegistryObject<EntityType<WhiteMushroomEntity>> TYPE_WHITE_MUSHROOM = createEntityType(WhiteMushroomEntity::new, WhiteMushroomEntity::new, MobCategory.MONSTER, "white_mushroom", 0.6F, 1.1F);
+//    public static final RegistryObject<EntityType<BlackFungusEntity>> TYPE_BLACK_FUNGUS = createEntityType(BlackFungusEntity::new, BlackFungusEntity::new, MobCategory.MONSTER, "black_fungus", 0.6F, 1.1F);
 
 
-    public static final RegistryObject<EntityType<EmeraldBluesEntity>> TYPE_EMERALD_BLUES = createEntityType(EmeraldBluesEntity::new, EmeraldBluesEntity::new, MobCategory.MONSTER, "emerald_blues", 0.8F, 1.6F);
+//    public static final RegistryObject<EntityType<EmeraldBluesEntity>> TYPE_EMERALD_BLUES = createEntityType(EmeraldBluesEntity::new, EmeraldBluesEntity::new, MobCategory.MONSTER, "emerald_blues", 0.8F, 1.6F);
 
-    public static final RegistryObject<EntityType<LargeBodyEntity>> TYPE_LARGE_BODY = createEntityType(LargeBodyEntity::new, LargeBodyEntity::new, MobCategory.MONSTER, "large_body", 1.3F, 1.6F);
-    public static final RegistryObject<EntityType<DirePlantEntity>> TYPE_DIRE_PLANT = createEntityType(DirePlantEntity::new, DirePlantEntity::new, MobCategory.MONSTER, "dire_plant", 0.75F, 1.5F);
+//    public static final RegistryObject<EntityType<LargeBodyEntity>> TYPE_LARGE_BODY = createEntityType(LargeBodyEntity::new, LargeBodyEntity::new, MobCategory.MONSTER, "large_body", 1.3F, 1.6F);
+//    public static final RegistryObject<EntityType<DirePlantEntity>> TYPE_DIRE_PLANT = createEntityType(DirePlantEntity::new, DirePlantEntity::new, MobCategory.MONSTER, "dire_plant", 0.75F, 1.5F);
 
 
 
@@ -164,10 +166,11 @@ public class ModEntities {
 //        event.registerEntityRenderer(TYPE_BLUE_RHAPSODY.get(), ElementalMusicalHeartlessRenderer::new);
 //        event.registerEntityRenderer(TYPE_YELLOW_OPERA.get(), ElementalMusicalHeartlessRenderer::new);
 //        event.registerEntityRenderer(TYPE_GREEN_REQUIEM.get(), ElementalMusicalHeartlessRenderer::new);
-//        event.registerEntityRenderer(TYPE_EMERALD_BLUES.get(), ElementalMusicalHeartlessRenderer::new);
+        event.registerEntityRenderer(TYPE_EMERALD_BLUES.get(), ElementalMusicalHeartlessRenderer::new);
 
 //        event.registerEntityRenderer(TYPE_DIRE_PLANT.get(), DirePlantRenderer::new);
-//        event.registerEntityRenderer(TYPE_SOLDIER.get(), SoldierRenderer::new);
+        //event.registerEntityRenderer(TYPE_SOLDIER.get(), SoldierRenderer::new);
+        event.registerEntityRenderer(TYPE_STEALTH_SOLDIER.get(), SoldierRenderer::new);
 //        event.registerEntityRenderer(TYPE_WHITE_MUSHROOM.get(), WhiteMushroomRenderer::new);
 //        event.registerEntityRenderer(TYPE_BLACK_FUNGUS.get(), BlackFungusRenderer::new);
 //
@@ -279,7 +282,7 @@ public class ModEntities {
 //		int emblemChance = Integer.parseInt(ModConfigs.mobSpawnRate.get(1).split(",")[1]);
 //		int nobodyChance = Integer.parseInt(ModConfigs.mobSpawnRate.get(2).split(",")[1]);
 //		int num = world.random.nextInt(100);
-//		List<Monster> mobs = new ArrayList<Monster>();
+		List<Monster> mobs = new ArrayList<Monster>();
 //
 //		if(num <= purebloodChance) {
 //			for(Entry<EntityType<? extends Entity>, Integer> entry : pureblood.entrySet()) {
@@ -303,11 +306,11 @@ public class ModEntities {
 //			KingdomKeys.LOGGER.error("No spawning, config is not adding up to 100 percent");
 //		}
 //
-//		return mobs.get(world.random.nextInt(mobs.size()));
-//	}
+		return mobs.get(world.random.nextInt(mobs.size()));
+	}
 //
-//    @SubscribeEvent
-//    public static void registerPlacements(SpawnPlacementRegisterEvent event) {
+    @SubscribeEvent
+    public static void registerPlacements(SpawnPlacementRegisterEvent event) {
 //    	event.register(TYPE_ASSASSIN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkAnyLightMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
 //        event.register(TYPE_BLUE_RHAPSODY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
 //        event.register(TYPE_DARKBALL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
@@ -335,7 +338,7 @@ public class ModEntities {
 //        event.register(TYPE_DRAGOON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
 //
 //        event.register(TYPE_MARLUXIA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.AND);
-//    }
+    }
 //
 //    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, KingdomKeys.MODID);
 //

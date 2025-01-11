@@ -21,6 +21,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import online.held_der_zeit.finalmix.entity.ModEntities;
 import online.held_der_zeit.finalmix.item.ModItems;
 import org.slf4j.Logger;
 
@@ -56,10 +57,10 @@ public class KingdomKeysFinalMix {
         MinecraftForge.EVENT_BUS.register(this);
         //MinecraftForge.EVENT_BUS.register(new EntityEvents());
         //ModMagics.MAGIC.register(modEventBus);
-       // MinecraftForge.EVENT_BUS.register(new ModCapabilities());
+        //MinecraftForge.EVENT_BUS.register(new ModCapabilities());
 //        ModSounds.SOUNDS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-//        ModEntities.ENTITIES.register(modEventBus);
+        ModEntities.ENTITIES.register(modEventBus);
 //        ModAbilities.ABILITIES.register(modEventBus);
 //        ModDriveForms.DRIVE_FORMS.register(modEventBus);
 //        ModShotlocks.SHOTLOCKS.register(modEventBus);
