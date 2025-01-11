@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All rights reserved"
+issueTrackerURL=""
+[[mods]]
+modId="kkfinalmix"
+version="${file.jarVersion}"
+displayName="Kingdom Keys: Final Mix"
+displayURL=""
+credits="Much Love to the Kingdom Hearts Series and Kingdom Keys Team"
+authors="Held_der_Zeit"
+description='''
+A Kingdom Keys expansion, that adds various things.
+'''
+[[dependencies.magicksaddon]]
+modId="kingdomkeys"
+mandatory=true
+versionRange="[1.20.1-2.5.1,)"
+ordering="AFTER"
+side="BOTH"
