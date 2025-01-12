@@ -1,5 +1,8 @@
 package online.held_der_zeit.finalmix.entity.mob;
 
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -11,20 +14,42 @@ import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.PlayMessages;
+import online.held_der_zeit.finalmix.entity.ModEntities;
 import online.kingdomkeys.kingdomkeys.entity.EntityHelper;
-import online.kingdomkeys.kingdomkeys.entity.ModEntities;
+//import online.kingdomkeys.kingdomkeys.entity.ModEntities;
+import online.kingdomkeys.kingdomkeys.entity.mob.BaseKHEntity;
 import online.kingdomkeys.kingdomkeys.entity.mob.SoldierEntity;
 import online.kingdomkeys.kingdomkeys.entity.mob.goal.SoldierGoal;
+import online.kingdomkeys.kingdomkeys.item.KKResistanceType;
 
-public class FMStealthSoldierEntity extends SoldierEntity {
+public class FMStealthSoldierEntity extends BaseKHEntity { //extends SoldierEntity {
 
     public FMStealthSoldierEntity(EntityType<? extends Monster> type, Level worldIn) {
         super(type, worldIn);
-        xpReward = 7;
+        xpReward = 9;
     }
 
     public FMStealthSoldierEntity(PlayMessages.SpawnEntity spawnEntity, Level world) {
-        this(ModEntities.TYPE_SOLDIER.get(), world);
+        this(ModEntities.TYPE_STEALTH_SOLDIER.get(), world);
+    }
+
+    // Stealth Soldier can go invisible - rather implement it being translucent
+    // it goes fully visible after enough damage (idk, like half is gone?)
+
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        float multiplier = 1;
+        if(source.getMsgId().equals(KKResistanceType.fire.toString())) {
+            multiplier = 0.5f;
+        }
+        if(source.getMsgId().equals(KKResistanceType.ice.toString())) {
+            multiplier = 0.5f;
+        }
+        if(source.getMsgId().equals(KKResistanceType.lightning.toString())) {
+            multiplier = 0.1f;
+        }
+        return super.hurt(source, amount*multiplier);
     }
 
     @Override

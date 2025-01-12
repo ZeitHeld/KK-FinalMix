@@ -84,13 +84,13 @@ public class KingdomKeysFinalMix {
 
     public static final RegistryObject<CreativeModeTab>
 
-            misc_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
+            kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.kkfinalmix"))
 //            //.icon(() -> new ItemStack(ModItemsRM.hasteSpell.get()))
 //            .icon(() -> new ItemStack(ModItems.dummy.get())
-//            .displayItems(((params, output) -> {
-//                fmItems.get().forEach(output::accept);
-//            }))
+            .displayItems(((params, output) -> {
+                fmItems.get().forEach(output::accept);
+            }))
             .build());
 
     private void setup(final FMLCommonSetupEvent event){

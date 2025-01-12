@@ -1,5 +1,6 @@
 {
-  "itemGroup.kkfinalmixtab": "KK: Final Mix"
+  "itemGroup.kkfinalmixtab": "KK: Final Mix",
 
-
+  "entity.kkfinalmix.black_ballade": "Black Ballade",
+  "entity.kkfinalmix.stealth_soldier": "Stealth Soldier"
 }

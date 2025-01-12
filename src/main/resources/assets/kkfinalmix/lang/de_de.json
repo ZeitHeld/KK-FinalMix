@@ -1,6 +1,9 @@
 {
   "itemGroup.kkfinalmix": "KK: Final Mix",
-  "key.categories.kkfinalmix": "Kingodm Keys: Final Mix"
+  "key.categories.kkfinalmix": "Kingodm Keys: Final Mix",
+
+  "entity.kkfinalmix.black_ballade": "Schwarze Ballade",
+  "entity.kkfinalmix.stealth_soldier": "Schleich Soldat"
 
   //"magic.magicksaddon.magic_haste0.name": "Hast",
   //"magic.magicksaddon.magic_haste1.name": "Hastra",
@@ -34,7 +37,6 @@
 
   //"key.remind.summonspirit": "Spirit Rufen",
 
-  //"entity.magicksaddon.chirithy": "Chirithy",
 
 
 
