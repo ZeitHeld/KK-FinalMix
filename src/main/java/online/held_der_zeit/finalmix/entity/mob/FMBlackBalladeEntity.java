@@ -104,256 +104,256 @@ public class FMBlackBalladeEntity extends BaseElementalMusicalHeartlessEntity {
 
 
     //not working, it won't let me do lightning damagetype
+    class BlackBalladeGoal extends TargetGoal {
+        private boolean canUseAttack = true;
+        private int attackTimer = 5, whileAttackTimer, shotChargeTimer = 50;
+        private float initialHealth;
+
+        public BlackBalladeGoal(FMBlackBalladeEntity e) {
+            super(e,true);
+        }
+
+        @Override
+        public boolean canUse() {
+            if (mob.getTarget() != null) {
+                if (!canUseAttack) {
+                    if (attackTimer > 0) {
+                        attackTimer-=2;
+                        return false;
+                    } else
+                        return true;
+                } else
+                    return true;
+            } else
+                return false;
+        }
+
+        @Override
+        public boolean canContinueToUse() {
+            return canUseAttack;
+        }
+
+        @Override
+        public void start() {
+            canUseAttack = true;
+            attackTimer = 25 + level().random.nextInt(5);
+            EntityHelper.setState(mob, 0);
+            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
+            whileAttackTimer = 0;
+            initialHealth = mob.getHealth();
+        }
+
+        @Override
+        public void tick() {
+            if (mob.getTarget() != null && canUseAttack) {
+                whileAttackTimer+=2;
+                LivingEntity target = this.mob.getTarget();
+
+                if (EntityHelper.getState(mob) == 0) {
+                    this.mob.getLookControl().setLookAt(target, 30F, 30F);
+                    if (level().random.nextInt(100) <= 35 && this.mob.distanceTo(target) > 6) {
+                        EntityHelper.setState(this.mob, 1);
+                    } else {
+                        if (level().random.nextInt(100) + level().random.nextDouble() <= 50) {
+                            if (mob.distanceTo(mob.getTarget()) < 8) {
+                                EntityHelper.setState(this.mob, 2);
+
+                                this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0D);
+
+                                for (LivingEntity enemy : EntityHelper.getEntitiesNear(this.mob, 4))
+                                    mob.doHurtTarget(enemy);
+                            } else
+                                return;
+                        } else {
+                            EntityHelper.setState(this.mob, 3);
+
+                            this.mob.getLookControl().setLookAt(target, 30F, 30F);
+                            this.mob.getNavigation().moveTo(target.getX(), target.getY(), target.getZ(), 3.0D);
+
+                            for (LivingEntity enemy : EntityHelper.getEntitiesNear(this.mob, 3))
+                                this.mob.doHurtTarget(enemy);
+                        }
+                    }
+
+                }
+
+                if (EntityHelper.getState(mob) == 3) {
+                    if (whileAttackTimer > 50)
+                        canUseAttack = false;
+
+                    if (mob.blockPosition().getX() == (int) target.getX() && mob.blockPosition().getY() == (int) target.getY() && mob.blockPosition().getZ() == (int) target.getZ())
+                        canUseAttack = false;
+
+                    if (mob.distanceToSqr(this.mob.getTarget()) < 3)
+                        canUseAttack = false;
+
+                    if (initialHealth > mob.getHealth())
+                        canUseAttack = false;
+                }
+
+                if (EntityHelper.getState(mob) == 2 && whileAttackTimer > 20) {
+                    canUseAttack = false;
+                    EntityHelper.setState(mob, 0);
+                    this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
+                }
+                else if (EntityHelper.getState(mob) == 1) {
+                    if(shotChargeTimer > 0){
+                        shotChargeTimer--;
+                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0D);
+                        ((ServerLevel)this.mob.level()).sendParticles(new DustParticleOptions(new Vector3f(1,1,0),1F), this.mob.getX(), this.mob.getY()+2.5, this.mob.getZ(), 1, 0,0,0, 0.0);
+                    } else {
+                        this.mob.getLookControl().setLookAt(target, 0F, 0F);
+                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
+                        if(!level().isClientSide) {
+                            LightningBolt lightningboltentity = EntityType.LIGHTNING_BOLT.create(level());
+                            lightningboltentity.moveTo(target.position());
+                            level().addFreshEntity(lightningboltentity);
+                            target.hurt(KKDamageTypes.getElementalDamage(KKDamageTypes.LIGHTNING, lightningboltentity, this.mob), (float)this.mob.getAttributeValue(Attributes.ATTACK_DAMAGE));
+                        }
+                        if(whileAttackTimer > 50) {
+                            shotChargeTimer = 50;
+                            canUseAttack = false;
+                            EntityHelper.setState(mob, 0);
+                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
 //    class BlackBalladeGoal extends TargetGoal {
 //        private boolean canUseAttack = true;
-//        private int attackTimer = 5, whileAttackTimer, shotChargeTimer = 50;
+//        private int attackTimer = 5;
+//        private int whileAttackTimer;
+//        private int shotChargeTimer = 50;
 //        private float initialHealth;
 //
+//        private int fakeCopies = 4;
+//        private boolean isFake;
+//
 //        public BlackBalladeGoal(FMBlackBalladeEntity e) {
-//            super(e,true);
+//            super(e, true);
 //        }
 //
-//        @Override
 //        public boolean canUse() {
-//            if (mob.getTarget() != null) {
-//                if (!canUseAttack) {
-//                    if (attackTimer > 0) {
-//                        attackTimer-=2;
+//            if (this.mob.getTarget() != null) {
+//                if (!this.canUseAttack) {
+//                    if (this.attackTimer > 0) {
+//                        this.attackTimer -= 2;
 //                        return false;
-//                    } else
+//                    } else {
 //                        return true;
-//                } else
+//                    }
+//                } else {
 //                    return true;
-//            } else
+//                }
+//            } else {
 //                return false;
-//        }
-//
-//        @Override
-//        public boolean canContinueToUse() {
-//            return canUseAttack;
-//        }
-//
-//        @Override
-//        public void start() {
-//            canUseAttack = true;
-//            attackTimer = 25 + level().random.nextInt(5);
-//            EntityHelper.setState(mob, 0);
-//            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
-//            whileAttackTimer = 0;
-//            initialHealth = mob.getHealth();
-//        }
-//
-//        @Override
-//        public void tick() {
-//            if (mob.getTarget() != null && canUseAttack) {
-//                whileAttackTimer+=2;
-//                LivingEntity target = this.mob.getTarget();
-//
-//                if (EntityHelper.getState(mob) == 0) {
-//                    this.mob.getLookControl().setLookAt(target, 30F, 30F);
-//                    if (level().random.nextInt(100) <= 35 && this.mob.distanceTo(target) > 6) {
-//                        EntityHelper.setState(this.mob, 1);
-//                    } else {
-//                        if (level().random.nextInt(100) + level().random.nextDouble() <= 50) {
-//                            if (mob.distanceTo(mob.getTarget()) < 8) {
-//                                EntityHelper.setState(this.mob, 2);
-//
-//                                this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0D);
-//
-//                                for (LivingEntity enemy : EntityHelper.getEntitiesNear(this.mob, 4))
-//                                    mob.doHurtTarget(enemy);
-//                            } else
-//                                return;
-//                        } else {
-//                            EntityHelper.setState(this.mob, 3);
-//
-//                            this.mob.getLookControl().setLookAt(target, 30F, 30F);
-//                            this.mob.getNavigation().moveTo(target.getX(), target.getY(), target.getZ(), 3.0D);
-//
-//                            for (LivingEntity enemy : EntityHelper.getEntitiesNear(this.mob, 3))
-//                                this.mob.doHurtTarget(enemy);
-//                        }
-//                    }
-//
-//                }
-//
-//                if (EntityHelper.getState(mob) == 3) {
-//                    if (whileAttackTimer > 50)
-//                        canUseAttack = false;
-//
-//                    if (mob.blockPosition().getX() == (int) target.getX() && mob.blockPosition().getY() == (int) target.getY() && mob.blockPosition().getZ() == (int) target.getZ())
-//                        canUseAttack = false;
-//
-//                    if (mob.distanceToSqr(this.mob.getTarget()) < 3)
-//                        canUseAttack = false;
-//
-//                    if (initialHealth > mob.getHealth())
-//                        canUseAttack = false;
-//                }
-//
-//                if (EntityHelper.getState(mob) == 2 && whileAttackTimer > 20) {
-//                    canUseAttack = false;
-//                    EntityHelper.setState(mob, 0);
-//                    this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
-//                }
-//                else if (EntityHelper.getState(mob) == 1) {
-//                    if(shotChargeTimer > 0){
-//                        shotChargeTimer--;
-//                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0D);
-//                        ((ServerLevel)this.mob.level()).sendParticles(new DustParticleOptions(new Vector3f(1,1,0),1F), this.mob.getX(), this.mob.getY()+2.5, this.mob.getZ(), 1, 0,0,0, 0.0);
-//                    } else {
-//                        this.mob.getLookControl().setLookAt(target, 0F, 0F);
-//                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
-//                        if(!level().isClientSide) {
-//                            LightningBolt lightningboltentity = EntityType.LIGHTNING_BOLT.create(level());
-//                            lightningboltentity.moveTo(target.position());
-//                            level().addFreshEntity(lightningboltentity);
-//                            target.hurt(KKDamageTypes.getElementalDamage(KKDamageTypes.LIGHTNING, lightningboltentity, this.mob), (float)this.mob.getAttributeValue(Attributes.ATTACK_DAMAGE));
-//                        }
-//                        if(whileAttackTimer > 50) {
-//                            shotChargeTimer = 50;
-//                            canUseAttack = false;
-//                            EntityHelper.setState(mob, 0);
-//                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.20D);
-//                        }
-//                    }
-//
-//                }
 //            }
 //        }
 //
+//        public boolean canContinueToUse() {
+//            return this.canUseAttack;
+//        }
+//
+//        public void start() {
+//            this.canUseAttack = true;
+//            this.attackTimer = 25 + FMBlackBalladeEntity.this.level().random.nextInt(5);
+//            EntityHelper.setState(this.mob, 0);
+//            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
+//            this.whileAttackTimer = 0;
+//            this.initialHealth = this.mob.getHealth();
+//        }
+//
+//        public void tick() {
+//            if (this.mob.getTarget() != null && this.canUseAttack) {
+//                this.whileAttackTimer += 2;
+//                LivingEntity target = this.mob.getTarget();
+//                if (EntityHelper.getState(this.mob) == 0) {
+//                    this.mob.getLookControl().setLookAt(target, 30.0F, 30.0F);
+//                    if (FMBlackBalladeEntity.this.level().random.nextInt(100) <= 35 && this.mob.distanceTo(target) > 6.0F) {
+//                        EntityHelper.setState(this.mob, 1);
+//                    } else {
+//                        Iterator var2;
+//                        LivingEntity enemy;
+//                        if ((double)FMBlackBalladeEntity.this.level().random.nextInt(100) + FMBlackBalladeEntity.this.level().random.nextDouble() <= 50.0) {
+//                            if (!(this.mob.distanceTo(this.mob.getTarget()) < 8.0F)) {
+//                                return;
+//                            }
+//
+//                            EntityHelper.setState(this.mob, 2);
+//                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0);
+//                            var2 = EntityHelper.getEntitiesNear(this.mob, 4.0).iterator();
+//
+//                            while(var2.hasNext()) {
+//                                enemy = (LivingEntity)var2.next();
+//                                this.mob.doHurtTarget(enemy);
+//                            }
+//                        } else {
+//                            EntityHelper.setState(this.mob, 3);
+//                            this.mob.getLookControl().setLookAt(target, 30.0F, 30.0F);
+//                            this.mob.getNavigation().moveTo(target.getX(), target.getY(), target.getZ(), 3.0);
+//                            var2 = EntityHelper.getEntitiesNear(this.mob, 3.0).iterator();
+//
+//                            while(var2.hasNext()) {
+//                                enemy = (LivingEntity)var2.next();
+//                                this.mob.doHurtTarget(enemy);
+//                            }
+//                        }
+//                    }
+//                }
+//
+//                if (EntityHelper.getState(this.mob) == 3) {
+//                    if (this.whileAttackTimer > 50) {
+//                        this.canUseAttack = false;
+//                    }
+//
+//                    if (this.mob.blockPosition().getX() == (int)target.getX() && this.mob.blockPosition().getY() == (int)target.getY() && this.mob.blockPosition().getZ() == (int)target.getZ()) {
+//                        this.canUseAttack = false;
+//                    }
+//
+//                    if (this.mob.distanceToSqr(this.mob.getTarget()) < 3.0) {
+//                        this.canUseAttack = false;
+//                    }
+//
+//                    if (this.initialHealth > this.mob.getHealth()) {
+//                        this.canUseAttack = false;
+//                    }
+//                }
+//
+//                if (EntityHelper.getState(this.mob) == 2 && this.whileAttackTimer > 20) {
+//                    this.canUseAttack = false;
+//                    EntityHelper.setState(this.mob, 0);
+//                    this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
+//                } else if (EntityHelper.getState(this.mob) == 1) {
+//                    if (this.shotChargeTimer > 0) {
+//                        --this.shotChargeTimer;
+//                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0);
+//                        ((ServerLevel)this.mob.level()).sendParticles(new DustParticleOptions(new Vector3f(1.0F, 1.0F, 0.0F), 1.0F), this.mob.getX(), this.mob.getY() + 2.5, this.mob.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
+//                    } else {
+//                        this.mob.getLookControl().setLookAt(target, 0.0F, 0.0F);
+//                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
+//                        if (!FMBlackBalladeEntity.this.level().isClientSide) {
+//                            LightningBolt lightningboltentity = (LightningBolt)EntityType.LIGHTNING_BOLT.create(FMBlackBalladeEntity.this.level());
+//                            lightningboltentity.moveTo(target.position());
+//                            FMBlackBalladeEntity.this.level().addFreshEntity(lightningboltentity);
+//                            this.mob.doHurtTarget(target);
+//                        }
+//
+//                        if (this.whileAttackTimer > 50) {
+//                            this.shotChargeTimer = 50;
+//                            this.canUseAttack = false;
+//                            EntityHelper.setState(this.mob, 0);
+//                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
+//                        }
+//                    }
+//                }
+//            }
+//
+//        }
 //    }
-
-    class BlackBalladeGoal extends TargetGoal {
-        private boolean canUseAttack = true;
-        private int attackTimer = 5;
-        private int whileAttackTimer;
-        private int shotChargeTimer = 50;
-        private float initialHealth;
-
-        private int fakeCopies = 4;
-        private boolean isFake;
-
-        public BlackBalladeGoal(FMBlackBalladeEntity e) {
-            super(e, true);
-        }
-
-        public boolean canUse() {
-            if (this.mob.getTarget() != null) {
-                if (!this.canUseAttack) {
-                    if (this.attackTimer > 0) {
-                        this.attackTimer -= 2;
-                        return false;
-                    } else {
-                        return true;
-                    }
-                } else {
-                    return true;
-                }
-            } else {
-                return false;
-            }
-        }
-
-        public boolean canContinueToUse() {
-            return this.canUseAttack;
-        }
-
-        public void start() {
-            this.canUseAttack = true;
-            this.attackTimer = 25 + FMBlackBalladeEntity.this.level().random.nextInt(5);
-            EntityHelper.setState(this.mob, 0);
-            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
-            this.whileAttackTimer = 0;
-            this.initialHealth = this.mob.getHealth();
-        }
-
-        public void tick() {
-            if (this.mob.getTarget() != null && this.canUseAttack) {
-                this.whileAttackTimer += 2;
-                LivingEntity target = this.mob.getTarget();
-                if (EntityHelper.getState(this.mob) == 0) {
-                    this.mob.getLookControl().setLookAt(target, 30.0F, 30.0F);
-                    if (FMBlackBalladeEntity.this.level().random.nextInt(100) <= 35 && this.mob.distanceTo(target) > 6.0F) {
-                        EntityHelper.setState(this.mob, 1);
-                    } else {
-                        Iterator var2;
-                        LivingEntity enemy;
-                        if ((double)FMBlackBalladeEntity.this.level().random.nextInt(100) + FMBlackBalladeEntity.this.level().random.nextDouble() <= 50.0) {
-                            if (!(this.mob.distanceTo(this.mob.getTarget()) < 8.0F)) {
-                                return;
-                            }
-
-                            EntityHelper.setState(this.mob, 2);
-                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0);
-                            var2 = EntityHelper.getEntitiesNear(this.mob, 4.0).iterator();
-
-                            while(var2.hasNext()) {
-                                enemy = (LivingEntity)var2.next();
-                                this.mob.doHurtTarget(enemy);
-                            }
-                        } else {
-                            EntityHelper.setState(this.mob, 3);
-                            this.mob.getLookControl().setLookAt(target, 30.0F, 30.0F);
-                            this.mob.getNavigation().moveTo(target.getX(), target.getY(), target.getZ(), 3.0);
-                            var2 = EntityHelper.getEntitiesNear(this.mob, 3.0).iterator();
-
-                            while(var2.hasNext()) {
-                                enemy = (LivingEntity)var2.next();
-                                this.mob.doHurtTarget(enemy);
-                            }
-                        }
-                    }
-                }
-
-                if (EntityHelper.getState(this.mob) == 3) {
-                    if (this.whileAttackTimer > 50) {
-                        this.canUseAttack = false;
-                    }
-
-                    if (this.mob.blockPosition().getX() == (int)target.getX() && this.mob.blockPosition().getY() == (int)target.getY() && this.mob.blockPosition().getZ() == (int)target.getZ()) {
-                        this.canUseAttack = false;
-                    }
-
-                    if (this.mob.distanceToSqr(this.mob.getTarget()) < 3.0) {
-                        this.canUseAttack = false;
-                    }
-
-                    if (this.initialHealth > this.mob.getHealth()) {
-                        this.canUseAttack = false;
-                    }
-                }
-
-                if (EntityHelper.getState(this.mob) == 2 && this.whileAttackTimer > 20) {
-                    this.canUseAttack = false;
-                    EntityHelper.setState(this.mob, 0);
-                    this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
-                } else if (EntityHelper.getState(this.mob) == 1) {
-                    if (this.shotChargeTimer > 0) {
-                        --this.shotChargeTimer;
-                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.0);
-                        ((ServerLevel)this.mob.level()).sendParticles(new DustParticleOptions(new Vector3f(1.0F, 1.0F, 0.0F), 1.0F), this.mob.getX(), this.mob.getY() + 2.5, this.mob.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
-                    } else {
-                        this.mob.getLookControl().setLookAt(target, 0.0F, 0.0F);
-                        this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
-                        if (!FMBlackBalladeEntity.this.level().isClientSide) {
-                            LightningBolt lightningboltentity = (LightningBolt)EntityType.LIGHTNING_BOLT.create(FMBlackBalladeEntity.this.level());
-                            lightningboltentity.moveTo(target.position());
-                            FMBlackBalladeEntity.this.level().addFreshEntity(lightningboltentity);
-                            this.mob.doHurtTarget(target);
-                        }
-
-                        if (this.whileAttackTimer > 50) {
-                            this.shotChargeTimer = 50;
-                            this.canUseAttack = false;
-                            EntityHelper.setState(this.mob, 0);
-                            this.mob.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.2);
-                        }
-                    }
-                }
-            }
-
-        }
-    }
 
 }
