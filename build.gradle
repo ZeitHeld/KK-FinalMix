@@ -145,7 +145,8 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // KK Implementation
-    implementation fg.deobf("kingdomkeys:kingdomkeys:1.20.1-2.5.1")
+    //implementation fg.deobf("kingdomkeys:kingdomkeys:1.20.1-2.5.1") // how to update to 2.5.5!!!!
+    implementation fg.deobf("curse.maven:kingdom-keys-re-coded-242862:6102824")
 
     // Remind Implementation
     // implementation fg.deobf("magicksaddon:magicksaddon:1.20.1-0.8.5.1")
