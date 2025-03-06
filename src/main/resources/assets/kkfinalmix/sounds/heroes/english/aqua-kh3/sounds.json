@@ -1,0 +1,143 @@
+{
+	"heroes/english/aqua-kh3/attack": {
+		"subtitles": "subtitle.kkfinalmix.player.attack",
+		"sounds": [
+			"heroes/english/aqua-kh3/attack1",
+			"heroes/english/aqua-kh3/attack2",
+			"heroes/english/aqua-kh3/attack3",
+			"heroes/english/aqua-kh3/attack4",
+			"heroes/english/aqua-kh3/attack5"
+		]
+	},
+	"heroes/english/aqua-kh3/hurt": {
+		"subtitles": "subtitle.kkfinalmix.player.hurt",
+		"sounds": [
+			"heroes/english/aqua-kh3/hurt1",
+			"heroes/english/aqua-kh3/hurt2",
+			"heroes/english/aqua-kh3/hurt3",
+			"heroes/english/aqua-kh3/hurt4",
+			"heroes/english/aqua-kh3/hurt5",
+			"heroes/english/aqua-kh3/hurt6",
+			"heroes/english/aqua-kh3/hurt7",
+			"heroes/english/aqua-kh3/hurt8",
+			"heroes/english/aqua-kh3/hurt9",
+			"heroes/english/aqua-kh3/hurt10"
+		]
+	},
+	"heroes/english/aqua-kh3/death": {
+		"subtitles": "subtitle.kkfinalmix.player.death",
+		"sounds": [
+			"heroes/english/aqua-kh3/death1",
+			"heroes/english/aqua-kh3/death2",
+			"heroes/english/aqua-kh3/death3",
+			"heroes/english/aqua-kh3/death4"
+		]
+	},
+	"heroes/english/aqua-kh3/thank": {
+		"subtitles": "subtitle.kkfinalmix.player.death",
+		"sounds": [
+			"heroes/english/aqua-kh3/thank1",
+			"heroes/english/aqua-kh3/thank2",
+			"heroes/english/aqua-kh3/thank3"
+		]
+	},
+	"heroes/english/aqua-kh3/item": {
+		"subtitles": "subtitle.kkfinalmix.player.death",
+		"sounds": [
+			"heroes/english/aqua-kh3/item"
+
+		]
+	},
+	"heroes/english/aqua-kh3/ko": {
+		"subtitles": "subtitle.kkfinalmix.player.death",
+		"sounds": [
+			"heroes/english/aqua-kh3/ko"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/generic": {
+		"sounds": [
+			"heroes/english/aqua-kh3/magic/generic1",
+			"heroes/english/aqua-kh3/magic/generic2"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/fire": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/fire1",
+			"heroes/english/aqua-kh3/magic/fire2"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/cure": {
+		"sounds": [
+			"heroes/english/aqua-kh3/magic/cure"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/blizzard": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/ice1",
+			"heroes/english/aqua-kh3/magic/ice2"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/gravity": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/gravity"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/thunder": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/thunder1",
+			"heroes/english/aqua-kh3/magic/thunder2",
+			"heroes/english/aqua-kh3/magic/thunder3"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/aero": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/aero1",
+			{
+				"name": "heroes/english/aqua-kh3/magic/defense",
+				"type": "event"
+			}
+		]
+	},
+	"heroes/english/aqua-kh3/magic/defense": {
+		"sounds": [
+			"heroes/english/aqua-kh3/magic/defense"
+		]
+	},
+	"heroes/english/aqua-kh3/magic/reflect": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/defense",
+				"type": "event"
+			}
+		]
+	},
+	"heroes/english/aqua-kh3/magic/stop": {
+		"sounds": [
+			{
+				"name": "heroes/english/aqua-kh3/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/aqua-kh3/magic/stop"
+		]
+	}
+}

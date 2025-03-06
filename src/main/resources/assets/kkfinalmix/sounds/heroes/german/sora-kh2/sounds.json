@@ -1,0 +1,126 @@
+{
+	"heroes/english/sora-kh2/attack": {
+		"subtitles": "subtitle.kkfinalmix.player.attack",
+		"sounds": [
+			"heroes/english/sora-kh2/attack1",
+			"heroes/english/sora-kh2/attack2",
+			"heroes/english/sora-kh2/attack3",
+			"heroes/english/sora-kh2/attack4",
+			"heroes/english/sora-kh2/attack5",
+			"heroes/english/sora-kh2/attack6",
+			"heroes/english/sora-kh2/attack7"
+		]
+	},
+	"heroes/english/sora-kh2/hurt": {
+		"subtitles": "subtitle.kkfinalmix.player.hurt",
+		"sounds": [
+			"heroes/english/sora-kh2/hurt1",
+			"heroes/english/sora-kh2/hurt2",
+			"heroes/english/sora-kh2/hurt3"
+		]
+	},
+	"heroes/english/sora-kh2/death": {
+		"subtitles": "subtitle.kkfinalmix.player.death",
+		"sounds": [
+			"heroes/english/sora-kh2/death"
+		]
+	},
+	"heroes/english/sora-kh2/item": {
+		"subtitles": "subtitle.kkfinalmix.player.item",
+		"sounds": [
+			"heroes/english/sora-kh2/item1",
+			"heroes/english/sora-kh2/item2"
+		]
+	},
+	"heroes/english/sora-kh2/magic/generic": {
+		"sounds": [
+			"heroes/english/sora-kh2/magic/generic1",
+			"heroes/english/sora-kh2/magic/generic2"
+		]
+	},
+	"heroes/english/sora-kh2/magic/fire": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh2/magic/fire"
+		]
+	},
+	"heroes/english/sora-kh2/magic/cure": {
+		"sounds": [
+			"heroes/english/sora-kh2/magic/cure"
+		]
+	},
+	"heroes/english/sora-kh2/magic/blizzard": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh2/magic/ice"
+		]
+	},
+	"heroes/english/sora-kh2/magic/gravity": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh1/magic/gravity"
+		]
+	},
+	"heroes/english/sora-kh2/magic/thunder": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh2/magic/thunder"
+		]
+	},
+	"heroes/english/sora-kh2/magic/aero": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh2/magic/aero1",
+			{
+				"name": "heroes/english/sora-kh2/magic/defense",
+				"type": "event"
+			}
+		]
+	},
+	"heroes/english/sora-kh1/magic/defense": {
+		"sounds": [
+			"heroes/english/sora-kh2/magic/defense"
+		]
+	},
+	"heroes/english/sora-kh1/magic/reflect": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/defense",
+				"type": "event"
+			}
+		]
+	},
+	"heroes/english/sora-kh2/magic/stop": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh2/magic/stop"
+		]
+	},
+	"heroes/english/sora-kh2/magic/magnet": {
+		"sounds": [
+			{
+				"name": "heroes/english/sora-kh2/magic/generic",
+				"type": "event"
+			},
+			"heroes/english/sora-kh1/magic/gravity"
+		]
+	}
+}
