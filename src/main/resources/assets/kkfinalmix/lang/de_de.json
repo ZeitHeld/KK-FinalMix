@@ -1,43 +1,19 @@
 {
-  "itemGroup.kkfinalmix": "KK: Final Mix",
-  "key.categories.kkfinalmix": "Kingodm Keys: Final Mix",
+  "itemGroup.kkfinalmix": "KK: Final Mix DE",
+  "key.categories.kkfinalmix": "Kingdom Keys: Final Mix",
 
   "entity.kkfinalmix.black_ballade": "Schwarze Ballade",
-  "entity.kkfinalmix.stealth_soldier": "Schleich Soldat"
+  "entity.kkfinalmix.stealth_soldier": "Schleich Soldat",
 
-  //"magic.magicksaddon.magic_haste0.name": "Hast",
-  //"magic.magicksaddon.magic_haste1.name": "Hastra",
-
-  //"item.magicksaddon.balloon_spell": "Balloon-Element",
-
-  //"ability.ability_dark_passage.name": "Dunkler Durchgang",
-  //"ability.ability_dark_passage.desc": "Erlaubt es dir Dunkle zu nutzen, ohne Mitglied der Organization zu sein.",
-
-  //"ability.ability_light_step_0.name": "Licht-Schritt ST.1",
-  //"ability.ability_light_step_1.name": "Licht-Schritt ST.2",
-
-  //"shotlock.flame_salvo.name": "Feuersalve",
-
-  //"item.magicksaddon.flame_salvo_shotlock": "Feuersalve-Fokussierung",
-
-  //"form.form_rage.name": "Wut-Form",
-
-  //"item.magicksaddon.xephiro_keyblade": "Blutrünstiger Blick",
-  //"item.magicksaddon.xephiro_keyblade.desc": "Ein Schlüsselschwert getragen von Xephiro. Alleine ein Blick darauf erfüllt dich mit Dunkelheit und Blutdurst...\nEs lehnt jeden anderen Träger ab, der nicht \"Xephiro\" ist.",
-  //"item.magicksaddon.xephiro_keyblade_chain": "Blutrünstiger Blick-Anhänger",
-
-  //"key.categories.magicksaddon": "Re:Mind",
-  //"key.magicksaddon.openmenu": "Menü Öffnen",
-  //"menu_button.prestige": "Neues Spiel +",
-  //"menu_button.prestige.desc": "Erlaubt es dir deine Stufe zurückzusetzen, sofern du die Bedingungen erfüllst.",
-
-  //"reactioncommand.rc_riskcharge.name": "Hasardeur",
-
-  //"key.categories.remind": "Kingdom Keys - Re:Mind",
-
-  //"key.remind.summonspirit": "Spirit Rufen",
-
-
-
-
+  "subtitles.kkfinalmix.player.attack": "Spieler greift an",
+  "subtitles.kkfinalmix.player.hurt": "Spieler wurde verletzt",
+  "subtitles.kkfinalmix.player.death": "Spieler ist gestorben",
+  "subtitles.kkfinalmix.player.magic.fire": "Spieler zaubert Feuermagie",
+  "subtitles.kkfinalmix.player.magic.blizzard": "Spieler zaubert Eismagie",
+  "subtitles.kkfinalmix.player.magic.aero": "Spieler zaubert Aeromagie",
+  "subtitles.kkfinalmix.player.magic.thunder": "Spieler zaubert Blitzmagie",
+  "subtitles.kkfinalmix.player.magic.gravity": "Spieler zaubert Gravitasmagie",
+  "subtitles.kkfinalmix.player.magic.magnet": "Spieler zaubert Magnetmagie",
+  "subtitles.kkfinalmix.player.magic.reflect": "Spieler zaubert Reflekmagie",
+  "subtitles.kkfinalmix.player.magic.water": "Spieler zaubert Wassermagie"
 }

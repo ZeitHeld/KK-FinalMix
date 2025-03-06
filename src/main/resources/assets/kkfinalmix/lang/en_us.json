@@ -1,6 +1,20 @@
 {
-  "itemGroup.kkfinalmixtab": "KK: Final Mix",
+  "itemGroup.kkfinalmixtab": "KK: Final Mix Tab",
+  "itemGroup.kkfinalmix": "KK: Final Mix",
 
   "entity.kkfinalmix.black_ballade": "Black Ballade",
-  "entity.kkfinalmix.stealth_soldier": "Stealth Soldier"
+  "entity.kkfinalmix.stealth_soldier": "Stealth Soldier",
+
+  "subtitles.kkfinalmix.player.attack": "Player attacks",
+  "subtitles.kkfinalmix.player.hurt": "Player got hurt",
+  "subtitles.kkfinalmix.player.death": "Player died",
+  "subtitles.kkfinalmix.player.magic.fire": "Player casts Fire magic",
+  "subtitles.kkfinalmix.player.magic.blizzard": "Player casts Blizzard magic",
+  "subtitles.kkfinalmix.player.magic.aero": "Player casts Aero magic",
+  "subtitles.kkfinalmix.player.magic.thunder": "Player casts Thunder magic",
+  "subtitles.kkfinalmix.player.magic.gravity": "Player casts Gravity magic",
+  "subtitles.kkfinalmix.player.magic.magnet": "Player casts Magnet magic",
+  "subtitles.kkfinalmix.player.magic.reflect": "Player casts Reflect magic",
+  "subtitles.kkfinalmix.player.magic.water": "Player casts Water magic"
+
 }
