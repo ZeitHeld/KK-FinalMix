@@ -20,7 +20,7 @@ public class CommandBoardMenu extends MenuBackground {
     }
 
     public CommandBoardMenu() {
-        super("gui.kkfinalmix.command_board_menu", new Color(50, 50, 0));
+        super("gui.kkfinalmix.command_board.menu", new Color(50, 50, 0));
     }
 
     protected void action(actions act) {

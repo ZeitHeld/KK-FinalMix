@@ -38,6 +38,12 @@
   //"key.remind.summonspirit": "Spirit Rufen",
 
 
-
+  "gui.kkfinalmix.command_deck.menu": "Kommando Deck",
+  "gui.kkfinalmix.command_deck.edit": "Deck Bearbeiten",
+  "gui.kkfinalmix.command_deck.melding": "Kommando Fusion",
+  "gui.kkfinalmix.command_deck.selection": "Deck Wählen",
+  "gui.kkfinalmix.command_deck.list": "Kommando Liste",
+  "gui.kkfinalmix.command_board.menu": "Kommandobrett",
+  "gui.kkfinalmix.command_board.play": "Spielen"
 
 }

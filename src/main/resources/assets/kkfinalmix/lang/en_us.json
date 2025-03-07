@@ -2,5 +2,13 @@
   "itemGroup.kkfinalmixtab": "KK: Final Mix",
 
   "entity.kkfinalmix.black_ballade": "Black Ballade",
-  "entity.kkfinalmix.stealth_soldier": "Stealth Soldier"
+  "entity.kkfinalmix.stealth_soldier": "Stealth Soldier",
+
+  "gui.kkfinalmix.command_deck.menu": "Command Deck",
+  "gui.kkfinalmix.command_deck.edit": "Edit Deck",
+  "gui.kkfinalmix.command_deck.melding": "Command Melding",
+  "gui.kkfinalmix.command_deck.selection": "Select Deck",
+  "gui.kkfinalmix.command_deck.list": "Command List",
+  "gui.kkfinalmix.command_board.menu": "Command Board",
+  "gui.kkfinalmix.command_board.play": "Play"
 }

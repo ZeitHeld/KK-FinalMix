@@ -18,7 +18,7 @@ public class CommandDeckMenu extends MenuBackground {
     MenuButton back, edit, selection, melding, list;
 
     public CommandDeckMenu() {
-        super("gui.kkfinalmix.command_deck_menu", new Color(0,50,0));
+        super("gui.kkfinalmix.command_deck.menu", new Color(0,50,0));
     }
 
      protected void action(String act) {
