@@ -79,19 +79,19 @@ public class KingdomKeysFinalMix {
 
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
+//    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
 
 
-    public static final RegistryObject<CreativeModeTab>
-
-            kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.kkfinalmix"))
-//            //.icon(() -> new ItemStack(ModItemsRM.hasteSpell.get()))
-//            .icon(() -> new ItemStack(ModItems.dummy.get())
-            .displayItems(((params, output) -> {
-                fmItems.get().forEach(output::accept);
-            }))
-            .build());
+//    public static final RegistryObject<CreativeModeTab>
+//
+//            kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
+//            .title(Component.translatable("itemGroup.kkfinalmix"))
+////            //.icon(() -> new ItemStack(ModItemsRM.hasteSpell.get()))
+////            .icon(() -> new ItemStack(ModItems.dummy.get())
+//            .displayItems(((params, output) -> {
+//                fmItems.get().forEach(output::accept);
+//            }))
+//            .build());
 
     private void setup(final FMLCommonSetupEvent event){
         // Some common setup code
@@ -108,7 +108,7 @@ public class KingdomKeysFinalMix {
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
-        LOGGER.info("Kingdom Keys: Final Mix Enabled!");
+        LOGGER.info("Kingdom Keys: Final Mix Enabled on SERVER!");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -121,7 +121,7 @@ public class KingdomKeysFinalMix {
             // Some client setup code
     		//MinecraftForge.EVENT_BUS.register(new InputHandlerRM());
 
-            LOGGER.info("Kingdom Keys: Final Mix Enabled!");
+            LOGGER.info("Kingdom Keys: Final Mix Enabled on CLIENT!");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
 
