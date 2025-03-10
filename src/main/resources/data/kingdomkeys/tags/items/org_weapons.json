@@ -1,0 +1,58 @@
+{
+    "replace": true,
+    "values": [
+        {
+            "id":"#kkfinalmix:org_weapons/xemnas_etheral_blades",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/xigbar_arrowguns",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/xaldin_lances",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/vexen_shields",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/lexaeus_axe_swords",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/zexion_lexicons",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/saix_claymores",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/axel_chakrams",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/demyx_sitars",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/luxord_cards",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/marluxia_scythes",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/larxene_knives",
+            "required": false
+        },
+        {
+            "id":"#kkfinalmix:org_weapons/roxas_keyblades",
+            "required": false
+        }
+
+    ]
+}

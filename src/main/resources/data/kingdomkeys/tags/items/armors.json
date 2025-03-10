@@ -1,0 +1,24 @@
+{
+    "values": [
+        {
+            "id":"magicksaddon:aqua_chaplet",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:heros_glove",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:heros_belt",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:master_belt",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:ultima_ribbon",
+            "required": false
+        }
+    ]
+}

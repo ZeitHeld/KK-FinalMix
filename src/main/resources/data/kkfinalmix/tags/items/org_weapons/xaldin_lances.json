@@ -1,0 +1,29 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:aer",
+        "kingdomkeys:aether",
+        "kingdomkeys:asura",
+        "kingdomkeys:broom",
+        "kingdomkeys:brume",
+        "kingdomkeys:crux",
+        "kingdomkeys:cynosura",
+        "kingdomkeys:dragonreign",
+        "kingdomkeys:fellking",
+        "kingdomkeys:foxfire",
+        "kingdomkeys:heavenfall",
+        "kingdomkeys:hegemon",
+        "kingdomkeys:lindworm",
+        "kingdomkeys:mazzaroth",
+        "kingdomkeys:moonglade",
+        "kingdomkeys:nescience",
+        "kingdomkeys:nightcloud",
+        "kingdomkeys:paladin",
+        "kingdomkeys:scission",
+        "kingdomkeys:shimmer",
+        "kingdomkeys:vortex",
+        "kingdomkeys:wyvern",
+        "kingdomkeys:yaksha",
+        "kingdomkeys:zephyr"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:absolute_zero",
+        "kingdomkeys:aegis",
+        "kingdomkeys:cold_blood",
+        "kingdomkeys:contrivance",
+        "kingdomkeys:cryolite_shield",
+        "kingdomkeys:deep_freeze",
+        "kingdomkeys:diamond_shield",
+        "kingdomkeys:edification",
+        "kingdomkeys:empiricism",
+        "kingdomkeys:false_theory",
+        "kingdomkeys:frozen_pride",
+        "kingdomkeys:glacier",
+        "kingdomkeys:gunz",
+        "kingdomkeys:iceberg",
+        "kingdomkeys:inquisition",
+        "kingdomkeys:mindel",
+        "kingdomkeys:pot_lid",
+        "kingdomkeys:product_one",
+        "kingdomkeys:scrutiny",
+        "kingdomkeys:snowman",
+        "kingdomkeys:snowslide",
+        "kingdomkeys:subzero",
+        "kingdomkeys:tester_zero",
+        "kingdomkeys:wurm"
+    ]
+}

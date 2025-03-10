@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:feather",
+        {
+            "id": "minecraft:brush",
+            "required": false
+        },
+        {
+            "id": "#forge:feathers",
+            "required": false
+        },
+        {
+            "id": "#c:brushitems",
+            "required": false
+        }
+    ]
+}

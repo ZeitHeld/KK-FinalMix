@@ -1,0 +1,32 @@
+{
+    "values": [
+        {
+            "id":"magicksaddon:xephiro_keyblade_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:pureblood_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:elemental_crescendo_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:gazing_omen_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:crystals_light_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:blitzers_dream_chain",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:legends_fang_chain",
+            "required": false
+        }
+    ]
+}

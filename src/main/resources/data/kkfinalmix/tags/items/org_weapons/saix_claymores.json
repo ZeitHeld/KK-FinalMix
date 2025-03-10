@@ -1,0 +1,29 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:artemis",
+        "kingdomkeys:astrologia",
+        "kingdomkeys:balsamic_moon",
+        "kingdomkeys:berserker",
+        "kingdomkeys:bunnymoon",
+        "kingdomkeys:crater",
+        "kingdomkeys:crescent",
+        "kingdomkeys:dichotomy",
+        "kingdomkeys:gibbous",
+        "kingdomkeys:horoscope",
+        "kingdomkeys:just_desserts",
+        "kingdomkeys:king_of_the_night",
+        "kingdomkeys:light_year",
+        "kingdomkeys:luminary",
+        "kingdomkeys:lunar_phase",
+        "kingdomkeys:lunatic",
+        "kingdomkeys:moonrise",
+        "kingdomkeys:moonset",
+        "kingdomkeys:new_moon",
+        "kingdomkeys:orbit",
+        "kingdomkeys:queen_of_the_night",
+        "kingdomkeys:selene",
+        "kingdomkeys:twilight",
+        "kingdomkeys:werewolf"
+    ]
+}
