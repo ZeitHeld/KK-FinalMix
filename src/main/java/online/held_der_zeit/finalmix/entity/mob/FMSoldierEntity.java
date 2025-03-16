@@ -24,9 +24,9 @@ public class FMSoldierEntity extends SoldierEntity {
         xpReward = 7;
     }
 
-    public FMSoldierEntity(PlayMessages.SpawnEntity spawnEntity, Level world) {
-        this(ModEntities.TYPE_SOLDIER.get(), world);
-    }
+//    public FMSoldierEntity(PlayMessages.SpawnEntity spawnEntity, Level world) {
+//        this(ModEntities.TYPE_SOLDIER.get(), world);
+//    }
 
     @Override
     protected void registerGoals() {
@@ -35,9 +35,8 @@ public class FMSoldierEntity extends SoldierEntity {
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Villager.class, true));
-       // this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Villager.class, true));
         this.targetSelector.addGoal(4, new SoldierGoal(this));
     }
 

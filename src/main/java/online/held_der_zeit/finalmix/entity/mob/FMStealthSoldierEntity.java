@@ -74,7 +74,7 @@ public class FMStealthSoldierEntity extends BaseKHEntity { //extends SoldierEnti
 
     @Override
     public int getMaxSpawnClusterSize() {
-        return 4;
+        return 2;
     }
 
     @Override
