@@ -16,9 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.network.PlayMessages;
 import online.held_der_zeit.finalmix.entity.ModEntities;
 import online.kingdomkeys.kingdomkeys.entity.EntityHelper;
-//import online.kingdomkeys.kingdomkeys.entity.ModEntities;
 import online.kingdomkeys.kingdomkeys.entity.mob.BaseKHEntity;
-import online.kingdomkeys.kingdomkeys.entity.mob.SoldierEntity;
 import online.kingdomkeys.kingdomkeys.entity.mob.goal.SoldierGoal;
 import online.kingdomkeys.kingdomkeys.item.KKResistanceType;
 
@@ -59,9 +57,8 @@ public class FMStealthSoldierEntity extends BaseKHEntity { //extends SoldierEnti
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Villager.class, true));
-       // this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Villager.class, true));
         this.targetSelector.addGoal(4, new SoldierGoal(this));
     }
 
@@ -72,7 +69,6 @@ public class FMStealthSoldierEntity extends BaseKHEntity { //extends SoldierEnti
             .add(Attributes.MAX_HEALTH, 50.0D)
             .add(Attributes.ATTACK_DAMAGE, 4.0D)
 			.add(Attributes.ATTACK_KNOCKBACK, 1.0D)
-
             ;
     }
 

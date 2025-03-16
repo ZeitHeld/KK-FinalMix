@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import online.held_der_zeit.finalmix.entity.mob.FMStealthSoldierEntity;
 import online.kingdomkeys.kingdomkeys.client.model.entity.SoldierModel;
-import online.kingdomkeys.kingdomkeys.entity.mob.SoldierEntity;
 
 public class FMStealthSoldierRenderer<Type extends FMStealthSoldierEntity> extends MobRenderer<Type, SoldierModel<Type>> {
     public FMStealthSoldierRenderer(EntityRendererProvider.Context context) {
