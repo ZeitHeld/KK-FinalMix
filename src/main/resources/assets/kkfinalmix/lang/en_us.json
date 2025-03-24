@@ -4,6 +4,9 @@
   "entity.kkfinalmix.black_ballade": "Black Ballade",
   "entity.kkfinalmix.stealth_soldier": "Stealth Soldier",
 
+  "gui.kkfinalmix.menu.button.command_deck": "Command Deck",
+  "gui.kkfinalmix.menu.button.command_board": "Command Board",
+
   "gui.kkfinalmix.command_deck.menu": "Command Deck",
   "gui.kkfinalmix.command_deck.edit": "Edit Deck",
   "gui.kkfinalmix.command_deck.melding": "Command Melding",
