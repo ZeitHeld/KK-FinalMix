@@ -55,7 +55,7 @@ public class FinalMixMenu extends MenuScreen {
         super.init();
 
         float lowBarHeight = (float) height * 0.17F;
-        int start = (int)(lowBarHeight) +20;
+        int start = (int)(lowBarHeight) +5;
         int pos = 0;
 
         float buttonPosX = (float) width * 0.80F;

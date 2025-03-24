@@ -7,6 +7,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import online.held_der_zeit.finalmix.client.gui.GUIHelperFM;
+import online.held_der_zeit.finalmix.network.PacketHandlerFM;
+import online.held_der_zeit.finalmix.network.cts.CSFMSyncAllClientDataPacket;
 import online.kingdomkeys.kingdomkeys.api.event.client.KKInputEvent;
 import online.kingdomkeys.kingdomkeys.capability.IPlayerCapabilities;
 import online.kingdomkeys.kingdomkeys.capability.ModCapabilities;
@@ -27,7 +29,7 @@ public class InputHandlerFM {
 	public void kkInputEvent(KKInputEvent.Pre event) {
 		if(event.getKeybind() == InputHandler.Keybinds.OPENMENU) {
 			PacketHandler.sendToServer(new CSSyncAllClientDataPacket());
-			//PacketHandlerFM.sendToServer(new CSSyncAllClientDataPacketFM());
+			PacketHandlerFM.sendToServer(new CSFMSyncAllClientDataPacket());
 			LocalPlayer player = Minecraft.getInstance().player;
 
 			if (ModCapabilities.getPlayer(player).getSoAState() != SoAState.COMPLETE) {
