@@ -18,7 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item>
 
         //dummy = ITEMS.register("dummy", () -> new Item(new Item.Properties(), KingdomKeysFinalMix.MODID+":dummy"));
-        dummy = ITEMS.register("dummy", () -> new MagicSpellItem(new Item.Properties(), KingdomKeysFinalMix.MODID+":magic_haste"));
+        dummySpell = ITEMS.register("dummySpell", () -> new MagicSpellItem(new Item.Properties(), KingdomKeysFinalMix.MODID+":magic_haste"));
 
     // Spell Orbs
 //        hasteSpell = ITEMS.register("haste_spell", () -> new MagicSpellItem(new Item.Properties(), KingdomKeysReMind.MODID+":magic_haste")),
