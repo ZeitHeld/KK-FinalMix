@@ -18,8 +18,7 @@ public class ModItemsFM {
 
         //dummy = ITEMS.register("dummy", () -> new Item(new Item.Properties(), KingdomKeysFinalMix.MODID+":dummy"));
 
-        dummySpell = ITEMS.register("spell_dummy", () -> new MagicSpellItem(new Item.Properties(),
-                                                                            KingdomKeysFinalMix.MODID + ":spell_dummy")),
+        //dummySpell = ITEMS.register("spell_dummy", () -> new MagicSpellItem(new Item.Properties(), KingdomKeysFinalMix.MODID + ":spell_dummy")),
 
     // Spell Orbs
     // hasteSpell = ITEMS.register("haste_spell", () -> new MagicSpellItem(new Item.Properties(), KingdomKeysReMind.MODID+":magic_haste")),
