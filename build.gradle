@@ -36,7 +36,7 @@ minecraft {
     // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
-            taskName '[Final Mix]Client'
+            taskName '[Final Mix]-Client'
             workingDirectory project.file('run')
 
             // Recommended logging data for a userdev environment
@@ -65,7 +65,7 @@ minecraft {
         }
 
         server {
-       		taskName '[Final Mix]Server'
+       		taskName '[Final Mix]-Server'
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
@@ -88,7 +88,7 @@ minecraft {
         // By default, the server will crash when no gametests are provided.
         // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
-        	taskName '[Final Mix]TestServer'
+        	taskName '[Final Mix]-TestServer'
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
@@ -105,7 +105,7 @@ minecraft {
         }
 
         data {
-        	taskName '[Final Mix]Datagen'
+        	taskName '[Final Mix]-Datagen'
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
@@ -144,9 +144,9 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.2.30'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    // KK Implementation
+    // KK Implementation - REQUIRED
     //implementation fg.deobf("kingdomkeys:kingdomkeys:1.20.1-2.5.1") // how to update to 2.5.5!!!!
-    implementation fg.deobf("curse.maven:kingdom-keys-re-coded-242862:6102824")
+    implementation fg.deobf("curse.maven:kingdom-keys-re-coded-242862:6218249") //2.6.1b
 
     // Remind Implementation
     // implementation fg.deobf("magicksaddon:magicksaddon:1.20.1-0.8.5.1")
@@ -157,6 +157,7 @@ dependencies {
     // GeckoLib Implementation
     //implementation fg.deobf("curse.maven:geckolib-388172:5188427")
 
+    // JourneyMap (and other maps?)
    
     
 }
