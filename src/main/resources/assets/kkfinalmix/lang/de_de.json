@@ -3,9 +3,18 @@
   "key.categories.kkfinalmix": "Kingodm Keys: Final Mix",
 
   "entity.kkfinalmix.black_ballade": "Schwarze Ballade",
-  "entity.kkfinalmix.stealth_soldier": "Schleich Soldat"
 
+  "entity.kkfinalmix.stealth_soldier": "Schleich Soldat",
 
+  "gui.kkfinalmix.menu.button.command_deck": "Kommando Deck",
+  "gui.kkfinalmix.menu.button.command_board": "Kommandobrett",
 
+  "gui.kkfinalmix.command_deck.menu": "Kommando Deck",
+  "gui.kkfinalmix.command_deck.edit": "Deck Bearbeiten",
+  "gui.kkfinalmix.command_deck.melding": "Kommando Fusion",
+  "gui.kkfinalmix.command_deck.selection": "Deck Wählen",
+  "gui.kkfinalmix.command_deck.list": "Kommando Liste",
+  "gui.kkfinalmix.command_board.menu": "Kommandobrett",
+  "gui.kkfinalmix.command_board.play": "Spielen"
 
 }
