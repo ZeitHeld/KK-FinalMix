@@ -42,7 +42,7 @@ public class ModItems {
 
 
             // KK Armors
-            lightResArmor = ITEMS.register("light_res_armor", () -> new KKArmorItem(new Item.Properties().stacksTo(1),7,
+            lightResArmor = ITEMS.register("shadow_shirt", () -> new KKArmorItem(new Item.Properties().stacksTo(1),4,
                                                                     ImmutableMap.of(KKResistanceType.light,20))),
 
 

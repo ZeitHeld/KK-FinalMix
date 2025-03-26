@@ -1,0 +1,176 @@
+{
+  "ability": "",
+  "base_stats": {
+    "mag": 7,
+    "str": 8
+  },
+  "description": "item.kkfinalmix.keyblade_dummy.desc",
+  "keychain": "kkfinalmix:keyblade_dummy_chain",
+  "levels": [
+    {
+      "mag": 8,
+      "recipe": [
+        {
+          "material": "kingdomkeys:fluorite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_shard",
+          "quantity": 2
+        }
+      ],
+      "str": 8
+    },
+    {
+      "mag": 8,
+      "recipe": [
+        {
+          "material": "kingdomkeys:fluorite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_shard",
+          "quantity": 3
+        }
+      ],
+      "str": 9
+    },
+    {
+      "mag": 9,
+      "recipe": [
+        {
+          "material": "kingdomkeys:fluorite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_shard",
+          "quantity": 4
+        }
+      ],
+      "str": 9
+    },
+    {
+      "mag": 9,
+      "recipe": [
+        {
+          "material": "kingdomkeys:damascus",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_stone",
+          "quantity": 1
+        }
+      ],
+      "str": 10
+    },
+    {
+      "mag": 10,
+      "recipe": [
+        {
+          "material": "kingdomkeys:damascus",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_stone",
+          "quantity": 2
+        },
+        {
+          "material": "kingdomkeys:writhing_stone",
+          "quantity": 2
+        }
+      ],
+      "str": 10
+    },
+    {
+      "mag": 10,
+      "recipe": [
+        {
+          "material": "kingdomkeys:damascus",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_stone",
+          "quantity": 3
+        },
+        {
+          "material": "kingdomkeys:writhing_stone",
+          "quantity": 2
+        }
+      ],
+      "str": 11
+    },
+    {
+      "mag": 11,
+      "recipe": [
+        {
+          "material": "kingdomkeys:adamantite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_gem",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:writhing_gem",
+          "quantity": 1
+        }
+      ],
+      "str": 11
+    },
+    {
+      "mag": 11,
+      "recipe": [
+        {
+          "material": "kingdomkeys:adamantite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_gem",
+          "quantity": 2
+        },
+        {
+          "material": "kingdomkeys:writhing_gem",
+          "quantity": 2
+        }
+      ],
+      "str": 12
+    },
+    {
+      "mag": 12,
+      "recipe": [
+        {
+          "material": "kingdomkeys:adamantite",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_gem",
+          "quantity": 3
+        },
+        {
+          "material": "kingdomkeys:writhing_gem",
+          "quantity": 2
+        }
+      ],
+      "str": 12
+    },
+    {
+      "mag": 12,
+      "recipe": [
+        {
+          "material": "kingdomkeys:electrum",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:wellspring_crystal",
+          "quantity": 1
+        },
+        {
+          "material": "kingdomkeys:writhing_crystal",
+          "quantity": 1
+        }
+      ],
+      "str": 13
+    }
+  ],
+  "reach": 5.0
+}

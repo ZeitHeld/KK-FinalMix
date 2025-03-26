@@ -1,9 +1,23 @@
 {
   "itemGroup.kkfinalmixtab": "KK: Final Mix",
 
+  //items
+  "item.kkfinalmix.shadow_shirt": "Shadow Shirt",
+
+  "item.kkfinalmix.spell_dummy": "Dummy Spell (Fire Copy)",
+
+  "item.kkfinalmix.keyblade_dummy": "Dummy Keyblade",
+  "item.kkfinalmix.keyblade_dummy.desc": "A Keyblade, that has lost it's original appearance long ago.",
+  "item.kkfinalmix.keyblade_dummy_chain": "Dummy Keyblade Chain",
+
+  //blocks
+
+
+  //entities
   "entity.kkfinalmix.black_ballade": "Black Ballade",
   "entity.kkfinalmix.stealth_soldier": "Stealth Soldier",
 
+  //gui
   "gui.kkfinalmix.menu.button.command_deck": "Command Deck",
   "gui.kkfinalmix.menu.button.command_board": "Command Board",
 

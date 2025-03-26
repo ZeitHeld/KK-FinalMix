@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/handheld",
 	"textures": {
-		"layer0": "held_tut:item/keyblade"
+		"layer0": "kkfinalmix:item/keyblade_dummy"
 	}
 }
