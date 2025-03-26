@@ -1,7 +1,7 @@
 package online.held_der_zeit.finalmix.client.gui;
 
 import online.held_der_zeit.finalmix.network.PacketHandlerFM;
-import online.held_der_zeit.finalmix.network.cts.CSFMOpenBoardPlay;
+import online.held_der_zeit.finalmix.network.cts.CSBoardPlayFM;
 import online.kingdomkeys.kingdomkeys.client.gui.GuiHelper;
 import online.kingdomkeys.kingdomkeys.client.gui.elements.MenuBackground;
 import online.kingdomkeys.kingdomkeys.client.gui.elements.buttons.MenuButton;
@@ -29,7 +29,7 @@ public class CommandBoardMenu extends MenuBackground {
                 GuiHelper.openMenu();
             case PLAY:
                 //play board game
-                PacketHandlerFM.sendToServer(new CSFMOpenBoardPlay());
+                PacketHandlerFM.sendToServer(new CSBoardPlayFM());
         }
     }
 

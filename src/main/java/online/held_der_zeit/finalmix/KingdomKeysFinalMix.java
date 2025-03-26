@@ -23,6 +23,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import online.held_der_zeit.finalmix.entity.ModEntities;
 import online.held_der_zeit.finalmix.item.ModItems;
+import online.held_der_zeit.finalmix.network.PacketHandlerFM;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -79,25 +80,24 @@ public class KingdomKeysFinalMix {
 
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-//    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
+    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
 
 
 
-//    public static final RegistryObject<CreativeModeTab>
-//
-//            kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
-//            .title(Component.translatable("itemGroup.kkfinalmix"))
-////            //.icon(() -> new ItemStack(ModItemsRM.hasteSpell.get()))
-////            .icon(() -> new ItemStack(ModItems.dummy.get())
-//            .displayItems(((params, output) -> {
-//                fmItems.get().forEach(output::accept);
-//            }))
-//            .build());
+    public static final RegistryObject<CreativeModeTab>
+
+            kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.kkfinalmix"))
+            .icon(() -> new ItemStack(ModItems.dummyKey.get()))
+            .displayItems(((params, output) -> {
+                fmItems.get().forEach(output::accept);
+            }))
+            .build());
 
     private void setup(final FMLCommonSetupEvent event){
         // Some common setup code
-		//event.enqueueWork(PacketHandlerRM::register);
-        //event.enqueueWork(ModEntitiesRM::registerPlacements);
+		event.enqueueWork(PacketHandlerFM::register);
+        //event.enqueueWork(ModEntitiesFM::registerPlacements);
 
 
         // Org Weapons

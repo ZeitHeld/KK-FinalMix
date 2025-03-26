@@ -1,10 +1,10 @@
 package online.held_der_zeit.finalmix.client.gui;
 
 import online.held_der_zeit.finalmix.network.PacketHandlerFM;
-import online.held_der_zeit.finalmix.network.cts.CSFMOpenDeckEdit;
-import online.held_der_zeit.finalmix.network.cts.CSFMOpenDeckList;
-import online.held_der_zeit.finalmix.network.cts.CSFMOpenDeckMelding;
-import online.held_der_zeit.finalmix.network.cts.CSFMOpenDeckSelection;
+import online.held_der_zeit.finalmix.network.cts.CSDeckEditFM;
+import online.held_der_zeit.finalmix.network.cts.CSDeckListFM;
+import online.held_der_zeit.finalmix.network.cts.CSDeckMeldingFM;
+import online.held_der_zeit.finalmix.network.cts.CSDeckSelectionFM;
 import online.kingdomkeys.kingdomkeys.client.gui.GuiHelper;
 import online.kingdomkeys.kingdomkeys.client.gui.elements.MenuBackground;
 import online.kingdomkeys.kingdomkeys.client.gui.elements.buttons.MenuButton;
@@ -27,16 +27,16 @@ public class CommandDeckMenu extends MenuBackground {
                  GuiHelper.openMenu();
              case "edit":
                  //deck edit menu
-                 PacketHandlerFM.sendToServer(new CSFMOpenDeckEdit());
+                 PacketHandlerFM.sendToServer(new CSDeckEditFM());
              case "selection":
                  //deck selection & rename menu
-                 PacketHandlerFM.sendToServer(new CSFMOpenDeckSelection());
+                 PacketHandlerFM.sendToServer(new CSDeckSelectionFM());
              case "melding":
                  //command melding
-                 PacketHandlerFM.sendToServer(new CSFMOpenDeckMelding());
+                 PacketHandlerFM.sendToServer(new CSDeckMeldingFM());
              case "list":
                  //command list
-                 PacketHandlerFM.sendToServer(new CSFMOpenDeckList());
+                 PacketHandlerFM.sendToServer(new CSDeckListFM());
          }
      }
 
