@@ -1,0 +1,88 @@
+{
+    "values": [
+        {
+            "id":"magicksaddon:luck_of_the_draw",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:light_heart",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:dark_heart",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:raging_heart",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:celestriad",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:forest_clasp",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:laughter_pin",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:crystal_regalia",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:crystal_regalia_plus",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:flanniversary_badge",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:mickey_clasp",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:breakthrough",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:haste_bracer",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:sacrifice_bracer",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:dark_ring",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:light_ring",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:exp_ring",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:focus_sash",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:heart_locket",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:friendbinder",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:nothingness_binder",
+            "required": false
+        }
+    ]
+}

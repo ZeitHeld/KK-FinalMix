@@ -1,0 +1,14 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:calm_bounty",
+        "kingdomkeys:false_bounty",
+        "kingdomkeys:guarded_trove",
+        "kingdomkeys:mingling_worlds",
+        "kingdomkeys:moments_reprieve",
+        "kingdomkeys:moogle_room",
+        "kingdomkeys:prosperous_repository",
+        "kingdomkeys:reposeful_grove",
+        "kingdomkeys:treacherous_repository"
+    ]
+}

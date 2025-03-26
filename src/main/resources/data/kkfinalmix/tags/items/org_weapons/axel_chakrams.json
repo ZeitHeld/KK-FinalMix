@@ -1,0 +1,29 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:ashes",
+        "kingdomkeys:blaze_of_glory",
+        "kingdomkeys:burnout",
+        "kingdomkeys:combustion",
+        "kingdomkeys:conformers",
+        "kingdomkeys:corona",
+        "kingdomkeys:delayed_action",
+        "kingdomkeys:dive_bombers",
+        "kingdomkeys:doldrums",
+        "kingdomkeys:double_edge",
+        "kingdomkeys:eternal_flames",
+        "kingdomkeys:ferris_wheel",
+        "kingdomkeys:ifrit",
+        "kingdomkeys:inferno",
+        "kingdomkeys:magma_ocean",
+        "kingdomkeys:moulin_rouge",
+        "kingdomkeys:omega_trinity",
+        "kingdomkeys:outbreak",
+        "kingdomkeys:pizza_cut",
+        "kingdomkeys:prometheus",
+        "kingdomkeys:prominence",
+        "kingdomkeys:sizzling_edge",
+        "kingdomkeys:volcanics",
+        "kingdomkeys:wildfire"
+    ]
+}

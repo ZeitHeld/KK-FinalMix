@@ -1,0 +1,17 @@
+{
+    "replace":false,
+    "values": [
+        "kingdomkeys:potion",
+        "kingdomkeys:hi_potion",
+        "kingdomkeys:mega_potion",
+        "kingdomkeys:ether",
+        "kingdomkeys:hi_ether",
+        "kingdomkeys:mega_ether",
+        "kingdomkeys:elixir",
+        "kingdomkeys:mega_lixir",
+        "kingdomkeys:drive_recovery",
+        "kingdomkeys:hi_drive_recovery",
+        "kingdomkeys:refocuser",
+        "kingdomkeys:hi_refocuser"
+    ]
+}

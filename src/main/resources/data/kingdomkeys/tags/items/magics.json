@@ -1,0 +1,69 @@
+{
+    "values": [
+        {
+            "id":"magicksaddon:haste_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:slow_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:holy_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:ruin_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:balloon_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:ultima_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:comet_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:berserk_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:autolife_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:drain_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:osmose_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:silence_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:esuna_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:dispel_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:warp_spell",
+            "required": false
+        },
+        {
+            "id":"magicksaddon:faith_spell",
+            "required": false
+        }
+
+    ]
+}

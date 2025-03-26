@@ -1,0 +1,32 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:abaddon_plasma",
+        "kingdomkeys:abyssal_tide",
+        "kingdomkeys:astral_blast",
+        "kingdomkeys:aubade",
+        "kingdomkeys:crown_of_guilt",
+        "kingdomkeys:darker_than_dark",
+        "kingdomkeys:glimpse_of_darkness",
+        "kingdomkeys:kingdom_key",
+        "kingdomkeys:leviathan",
+        "kingdomkeys:lunar_eclipse",
+        "kingdomkeys:maverick_flare",
+        "kingdomkeys:midnight_roar",
+        "kingdomkeys:missing_ache",
+        "kingdomkeys:oathkeeper",
+        "kingdomkeys:oblivion",
+        "kingdomkeys:omega_weapon",
+        "kingdomkeys:ominous_blight",
+        "kingdomkeys:pain_of_solitude",
+        "kingdomkeys:rejection_of_fate",
+        "kingdomkeys:sign_of_innocence",
+        "kingdomkeys:silent_dirge",
+        "kingdomkeys:total_eclipse",
+        "kingdomkeys:true_lights_flight",
+        "kingdomkeys:twilight_blaze",
+        "kingdomkeys:two_become_one",
+        "kingdomkeys:umbrella",
+        "kingdomkeys:wooden_stick"
+    ]
+}

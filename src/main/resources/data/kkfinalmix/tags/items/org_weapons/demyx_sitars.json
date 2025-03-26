@@ -1,0 +1,30 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:after_school",
+        "kingdomkeys:arpeggio",
+        "kingdomkeys:basic_model",
+        "kingdomkeys:concerto",
+        "kingdomkeys:da_capo",
+        "kingdomkeys:eight_finger",
+        "kingdomkeys:fermata",
+        "kingdomkeys:fortissimo",
+        "kingdomkeys:harmonics",
+        "kingdomkeys:interlude",
+        "kingdomkeys:million_bucks",
+        "kingdomkeys:old_hand",
+        "kingdomkeys:overture",
+        "kingdomkeys:power_chord",
+        "kingdomkeys:prince_of_awesome",
+        "kingdomkeys:quartet",
+        "kingdomkeys:quintet",
+        "kingdomkeys:rise_to_fame",
+        "kingdomkeys:rock_star",
+        "kingdomkeys:overture",
+        "kingdomkeys:sanctuary",
+        "kingdomkeys:serenade",
+        "kingdomkeys:songbird",
+        "kingdomkeys:tune_up",
+        "kingdomkeys:up_to_eleven"
+    ]
+}

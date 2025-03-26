@@ -1,0 +1,10 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:alchemic_waking",
+        "kingdomkeys:martial_waking",
+        "kingdomkeys:sorcerous_waking",
+        "kingdomkeys:stagnant_space",
+        "kingdomkeys:weightless_space"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "patchouli:shapeless_book_recipe",
+  "ingredients": [
+    [
+      { "item": "minecraft:book" },
+      { "item": "minecraft:writable_book" }
+    ],
+    [
+      { "item": "kingdomkeys:normal_blox" },
+      { "tag": "kingdomkeys:journal_items" }
+    ]
+  ],
+  "book": "kingdomkeys:jiminys_journal"
+}

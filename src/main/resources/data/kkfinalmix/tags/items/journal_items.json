@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "kingdomkeys:normal_blox",
+        "kingdomkeys:hard_blox",
+        "kingdomkeys:metal_blox",
+        {
+            "id": "#kkfinalmix:synthesis_materials",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "replace":true,
+    "values": [
+        "kingdomkeys:almighty_darkness",
+        "kingdomkeys:bottomless_darkness",
+        "kingdomkeys:feeble_darkness",
+        "kingdomkeys:looming_darkness",
+        "kingdomkeys:sleeping_darkness",
+        "kingdomkeys:teeming_darkness",
+        "kingdomkeys:tranquil_darkness"
+    ]
+}
