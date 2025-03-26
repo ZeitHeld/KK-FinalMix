@@ -13,20 +13,17 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.target.TargetGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.PlayMessages;
 import online.held_der_zeit.finalmix.KingdomKeysFinalMix;
-import online.held_der_zeit.finalmix.entity.ModEntities;
+import online.held_der_zeit.finalmix.entity.ModEntitiesFM;
 import online.kingdomkeys.kingdomkeys.damagesource.KKDamageTypes;
 import online.kingdomkeys.kingdomkeys.entity.EntityHelper;
 import online.kingdomkeys.kingdomkeys.entity.mob.BaseElementalMusicalHeartlessEntity;
 import online.kingdomkeys.kingdomkeys.item.KKResistanceType;
 import org.joml.Vector3f;
-
-import java.util.Iterator;
 
 public class FMBlackBalladeEntity extends BaseElementalMusicalHeartlessEntity {
 
@@ -35,7 +32,7 @@ public class FMBlackBalladeEntity extends BaseElementalMusicalHeartlessEntity {
     }
 
     public FMBlackBalladeEntity(PlayMessages.SpawnEntity spawnEntity, Level world) {
-        super(ModEntities.TYPE_BLACK_BALLADE.get(), spawnEntity, world);
+        super(ModEntitiesFM.TYPE_BLACK_BALLADE.get(), spawnEntity, world);
         xpReward = 10;
     }
 

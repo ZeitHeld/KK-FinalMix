@@ -21,8 +21,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import online.held_der_zeit.finalmix.entity.ModEntities;
-import online.held_der_zeit.finalmix.item.ModItems;
+import online.held_der_zeit.finalmix.entity.ModEntitiesFM;
+import online.held_der_zeit.finalmix.item.ModItemsFM;
 import online.held_der_zeit.finalmix.network.PacketHandlerFM;
 import org.slf4j.Logger;
 
@@ -60,8 +60,8 @@ public class KingdomKeysFinalMix {
         //ModMagics.MAGIC.register(modEventBus);
         //MinecraftForge.EVENT_BUS.register(new ModCapabilities());
 //        ModSounds.SOUNDS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
-        ModEntities.ENTITIES.register(modEventBus);
+        ModItemsFM.ITEMS.register(modEventBus);
+        ModEntitiesFM.ENTITIES.register(modEventBus);
 //        ModAbilities.ABILITIES.register(modEventBus);
 //        ModDriveForms.DRIVE_FORMS.register(modEventBus);
 //        ModShotlocks.SHOTLOCKS.register(modEventBus);
@@ -80,7 +80,7 @@ public class KingdomKeysFinalMix {
 
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
+    private static final Supplier<List<ItemStack>> fmItems = Suppliers.memoize(() -> ModItemsFM.ITEMS.getEntries().stream().map(RegistryObject::get).map(ItemStack::new).toList());
 
 
 
@@ -88,7 +88,7 @@ public class KingdomKeysFinalMix {
 
             kkfm_tab = TABS.register("kkfinalmixtab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.kkfinalmix"))
-            .icon(() -> new ItemStack(ModItems.dummyKey.get()))
+            .icon(() -> new ItemStack(ModItemsFM.dummyKey.get()))
             .displayItems(((params, output) -> {
                 fmItems.get().forEach(output::accept);
             }))

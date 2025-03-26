@@ -1,13 +1,9 @@
 package online.held_der_zeit.finalmix.entity;
 
-import net.minecraft.client.model.geom.builders.CubeDeformation;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -23,43 +19,16 @@ import net.minecraftforge.registries.RegistryObject;
 import online.held_der_zeit.finalmix.KingdomKeysFinalMix;
 import online.held_der_zeit.finalmix.entity.mob.*;
 import online.held_der_zeit.finalmix.client.render.entity.*;
-import online.kingdomkeys.kingdomkeys.KingdomKeys;
-import online.kingdomkeys.kingdomkeys.block.ModBlocks;
 import online.kingdomkeys.kingdomkeys.client.ClientSetup;
-import online.kingdomkeys.kingdomkeys.client.model.BlizzardModel;
-import online.kingdomkeys.kingdomkeys.client.model.FireModel;
-import online.kingdomkeys.kingdomkeys.client.model.armor.*;
-import online.kingdomkeys.kingdomkeys.client.model.entity.*;
-import online.kingdomkeys.kingdomkeys.client.render.block.*;
-import online.kingdomkeys.kingdomkeys.client.render.entity.*;
-import online.kingdomkeys.kingdomkeys.client.render.entity.drops.*;
-import online.kingdomkeys.kingdomkeys.client.render.magic.HeartEntityRenderer;
-import online.kingdomkeys.kingdomkeys.client.render.magic.InvisibleEntityRenderer;
-import online.kingdomkeys.kingdomkeys.client.render.magic.MagnetEntityRenderer;
-import online.kingdomkeys.kingdomkeys.client.render.magic.ThunderBoltEntityRenderer;
-import online.kingdomkeys.kingdomkeys.client.render.org.*;
-import online.kingdomkeys.kingdomkeys.client.render.shotlock.UltimaCannonShotlockShotEntityRenderer;
-import online.kingdomkeys.kingdomkeys.client.render.shotlock.VolleyShotlockShotEntityRenderer;
-import online.kingdomkeys.kingdomkeys.config.ModConfigs;
-import online.kingdomkeys.kingdomkeys.entity.*;
 import online.kingdomkeys.kingdomkeys.entity.EntityHelper.MobType;
-import online.kingdomkeys.kingdomkeys.entity.block.*;
-import online.kingdomkeys.kingdomkeys.entity.magic.*;
-import online.kingdomkeys.kingdomkeys.entity.mob.*;
-import online.kingdomkeys.kingdomkeys.entity.organization.*;
-import online.kingdomkeys.kingdomkeys.entity.shotlock.*;
 import online.kingdomkeys.kingdomkeys.item.ModItems;
 
-import java.awt.*;
 import java.util.List;
 import java.util.*;
-import java.util.Map.Entry;
 import java.util.function.BiFunction;
 
-import static online.kingdomkeys.kingdomkeys.entity.EntityHelper.MobType.*;
-
 @Mod.EventBusSubscriber(modid = KingdomKeysFinalMix.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModEntities {
+public class ModEntitiesFM {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, KingdomKeysFinalMix.MODID);
 
     public static HashMap<EntityType<? extends Entity>,Integer> pureblood = new HashMap<>();
@@ -73,38 +42,15 @@ public class ModEntities {
     public static final Item.Properties PROPERTIES = new Item.Properties();
 
     //pure blooded heartless
-//    public static final RegistryObject<EntityType<ShadowEntity>> TYPE_SHADOW = createEntityType(ShadowEntity::new, ShadowEntity::new, MobCategory.MONSTER, "shadow", 0.5F, 0.7F);
-//    public static final RegistryObject<EntityType<MegaShadowEntity>> TYPE_MEGA_SHADOW = createEntityType(MegaShadowEntity::new, MegaShadowEntity::new, MobCategory.MONSTER, "mega_shadow", 1.5F, 1.7F);
-//    public static final RegistryObject<EntityType<GigaShadowEntity>> TYPE_GIGA_SHADOW = createEntityType(GigaShadowEntity::new, GigaShadowEntity::new, MobCategory.MONSTER, "giga_shadow", 2.5F, 2.7F);
-//    public static final RegistryObject<EntityType<DarkballEntity>> TYPE_DARKBALL = createEntityType(DarkballEntity::new, DarkballEntity::new, MobCategory.MONSTER, "darkball", 1.5F, 2F);
-//    public static final RegistryObject<EntityType<ShadowGlobEntity>> TYPE_SHADOW_GLOB = createEntityType(ShadowGlobEntity::new, ShadowGlobEntity::new, MobCategory.MONSTER, "shadow_glob", 1F, 1F);
+    //nova shadow
 
     //Emblem heartless
-//    public static final RegistryObject<EntityType<MinuteBombEntity>> TYPE_MINUTE_BOMB = createEntityType(MinuteBombEntity::new, MinuteBombEntity::new, MobCategory.MONSTER, "minute_bomb", 0.6F, 1.3F);
-//    public static final RegistryObject<EntityType<SkaterBombEntity>> TYPE_SKATER_BOMB = createEntityType(SkaterBombEntity::new, SkaterBombEntity::new, MobCategory.MONSTER, "skater_bomb", 0.6F, 1.3F);
-//    public static final RegistryObject<EntityType<StormBombEntity>> TYPE_STORM_BOMB = createEntityType(StormBombEntity::new, StormBombEntity::new, MobCategory.MONSTER, "storm_bomb", 0.6F, 1.3F);
-//    public static final RegistryObject<EntityType<DetonatorEntity>> TYPE_DETONATOR = createEntityType(DetonatorEntity::new, DetonatorEntity::new, MobCategory.MONSTER, "detonator", 0.6F, 1.3F);
 
     public static final RegistryObject<EntityType<FMBlackBalladeEntity>> TYPE_BLACK_BALLADE = createEntityTypeImmuneToFire(FMBlackBalladeEntity::new, FMBlackBalladeEntity::new, MobCategory.MONSTER, "black_ballade", 1.0F,  2.0F);
     public static final RegistryObject<Item> BLACK_BALLADE_EGG = ModItems.ITEMS.register("black_ballade_egg", () -> new ForgeSpawnEggItem(TYPE_BLACK_BALLADE, 0x262626, 0x4C1E1E, PROPERTIES));
-//    public static final RegistryObject<EntityType<RedNocturneEntity>> TYPE_RED_NOCTURNE = createEntityTypeImmuneToFire(RedNocturneEntity::new, RedNocturneEntity::new, MobCategory.MONSTER, "red_nocturne", 1.0F,  2.0F);
-//    public static final RegistryObject<EntityType<BlueRhapsodyEntity>> TYPE_BLUE_RHAPSODY = createEntityType(BlueRhapsodyEntity::new, BlueRhapsodyEntity::new, MobCategory.MONSTER, "blue_rhapsody", 1.0F, 2.0F);
-//    public static final RegistryObject<EntityType<YellowOperaEntity>> TYPE_YELLOW_OPERA = createEntityType(YellowOperaEntity::new, YellowOperaEntity::new, MobCategory.MONSTER, "yellow_opera", 1.0F, 2.0F);
-//    public static final RegistryObject<EntityType<GreenRequiemEntity>> TYPE_GREEN_REQUIEM = createEntityType(GreenRequiemEntity::new, GreenRequiemEntity::new, MobCategory.MONSTER, "green_requiem", 1.0F, 2.0F);
 
-//    public static final RegistryObject<EntityType<SpawningOrbEntity>> TYPE_SPAWNING_ORB = createEntityType(SpawningOrbEntity::new, SpawningOrbEntity::new, MobCategory.MONSTER, "spawning_orb", 1.5F,  1.5F);
-
-//    public static final RegistryObject<EntityType<SoldierEntity>> TYPE_SOLDIER = createEntityType(SoldierEntity::new, SoldierEntity::new, MobCategory.MONSTER, "soldier", 0.8F, 1.6F);
     public static final RegistryObject<EntityType<FMStealthSoldierEntity>> TYPE_STEALTH_SOLDIER = createEntityType(FMStealthSoldierEntity::new, FMStealthSoldierEntity::new, MobCategory.MONSTER, "stealth_soldier", 0.8F, 1.6F);
     public static final RegistryObject<Item> STEALTH_SOLDIER_EGG = ModItems.ITEMS.register("stealth_soldier_egg", () -> new ForgeSpawnEggItem(TYPE_STEALTH_SOLDIER, 0x253D25, 0x064E56, PROPERTIES));
-//    public static final RegistryObject<EntityType<WhiteMushroomEntity>> TYPE_WHITE_MUSHROOM = createEntityType(WhiteMushroomEntity::new, WhiteMushroomEntity::new, MobCategory.MONSTER, "white_mushroom", 0.6F, 1.1F);
-//    public static final RegistryObject<EntityType<BlackFungusEntity>> TYPE_BLACK_FUNGUS = createEntityType(BlackFungusEntity::new, BlackFungusEntity::new, MobCategory.MONSTER, "black_fungus", 0.6F, 1.1F);
-
-
-//    public static final RegistryObject<EntityType<EmeraldBluesEntity>> TYPE_EMERALD_BLUES = createEntityType(EmeraldBluesEntity::new, EmeraldBluesEntity::new, MobCategory.MONSTER, "emerald_blues", 0.8F, 1.6F);
-
-//    public static final RegistryObject<EntityType<LargeBodyEntity>> TYPE_LARGE_BODY = createEntityType(LargeBodyEntity::new, LargeBodyEntity::new, MobCategory.MONSTER, "large_body", 1.3F, 1.6F);
-//    public static final RegistryObject<EntityType<DirePlantEntity>> TYPE_DIRE_PLANT = createEntityType(DirePlantEntity::new, DirePlantEntity::new, MobCategory.MONSTER, "dire_plant", 0.75F, 1.5F);
 
 
     // unversed
