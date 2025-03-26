@@ -63,9 +63,9 @@ public class FMSoldierEntity extends SoldierEntity {
         this.entityData.define(EntityHelper.ANIMATION, 0);
     }
 
-    @Override
-    public EntityHelper.MobType getKHMobType() {
-        return EntityHelper.MobType.HEARTLESS_EMBLEM;
-    }
+//    @Override
+//    public EntityHelper.MobType getKHMobType() {
+//        return EntityHelper.MobType.HEARTLESS_EMBLEM;
+//    }
 
 }

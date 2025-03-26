@@ -20,7 +20,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.PlayMessages;
 import online.held_der_zeit.finalmix.KingdomKeysFinalMix;
 import online.held_der_zeit.finalmix.entity.ModEntities;
-import online.kingdomkeys.kingdomkeys.KingdomKeys;
 import online.kingdomkeys.kingdomkeys.damagesource.KKDamageTypes;
 import online.kingdomkeys.kingdomkeys.entity.EntityHelper;
 import online.kingdomkeys.kingdomkeys.entity.mob.BaseElementalMusicalHeartlessEntity;
@@ -58,7 +57,7 @@ public class FMBlackBalladeEntity extends BaseElementalMusicalHeartlessEntity {
     @Override
     public Element getElementToUse() {
         return Element.THUNDER;
-    } //DARKNESS?
+    }
 
     @OnlyIn(Dist.CLIENT)
     @Override
